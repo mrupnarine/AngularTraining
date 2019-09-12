@@ -1,0 +1,14 @@
+<div>
+<p>1. Add input field which updates a property('username') via Two-Way-Binding <br>
+   2. Output the username property via String Interpolation (in a paragraph below the input) <br>
+   3. Add a button which may only be clicked if the username is NOT an empty String <br>
+   4. Upon clicking the button, the username should be reset to an empty string <br></p>
+</div>
+<hr/>
+
+<div><input [(ngModel)]="username"></div>
+<div><p>{{username}}</p></div>
+<div>
+  <button [disabled] = "isUserNameEmpty()" 
+  (click) = "setStringEmpty()" class="btn btn-primary"> Rest Empty String</button>
+</div>
